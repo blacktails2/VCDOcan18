@@ -1,0 +1,528 @@
+@charset 'utf-8';
+$main: #e6e6e8;
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@include foundation-global-styles;
+@include foundation-grid;
+// @include foundation-flex-grid;
+//
+@include foundation-xy-grid-classes;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-responsive-embed;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+// @include foundation-float-classes;
+@include foundation-flex-classes;
+
+// @include foundation-prototype-classes;
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=55c38ded-8248-4088-a0e1-75eeff0a03e5");
+@font-face {
+	font-family: "DINCon";
+	src: url("../fonts/0b46a18d-fb34-4ef7-b5da-5902c510577a.eot?#iefix");
+	src: url("../fonts/0b46a18d-fb34-4ef7-b5da-5902c510577a.eot?#iefix") format("eot"), url("../fonts/76b8cda6-0ded-4197-acab-e314297eb90f.woff2") format("woff2"), url("../fonts/2613a064-2962-44af-ae6f-3640e06e8dc4.woff") format("woff"), url("../fonts/2889b152-497e-4ea3-a90d-02854d136a8d.ttf") format("truetype"), url("../fonts/4f311da1-9ec6-4379-9621-b45be0e23abd.svg#4f311da1-9ec6-4379-9621-b45be0e23abd") format("svg");
+}
+
+@keyframes vertical {
+	0% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(-3px);
+	}
+}
+
+.sidemenu {
+	padding-bottom: 10rem;
+	li {
+		font-family: "DINCon";
+		font-size: 1.5em;
+		a {
+			color: $main;
+			span {
+				font-family: "RoHMinchoStd-UB", "本明朝-U （標準がな）", "HonMincho-U", serif;
+				font-size: 0.7em;
+			}
+		}
+	}
+}
+
+img {
+	width: 100%;
+}
+
+
+#nav {
+	margin-left: 2rem;
+	img {
+		float: left;
+		cursor: pointer;
+	}
+	#ham {
+		background-color: $main;
+		width: 2.2rem;
+		margin-top: 0.2rem;
+	}
+	#navright {
+		position: absolute;
+		right: 1.4rem;
+		background-color: $main;
+		padding-right: 0.3rem;
+		a {
+			color: black;
+			span {
+				font-family: DINCon;
+				font-size: 2em;
+				margin-left: 5px;
+			}
+		}
+		i {
+			font-size: 2em;
+			margin-right: 0.3rem;
+			margin-left: 0.3rem;
+			margin-top: 4px;
+			float: left;
+		}
+		img {
+			margin-left: 0.3rem;
+			margin-right: 0.3rem;
+			width: 2.4rem;
+			margin-top: 1px;
+		}
+	}
+	h3 {
+		float: left;
+		font-size: 2em;
+		opacity: 0.1;
+		padding-right: 12px;
+		padding-left: 0.5rem;
+		&:hover {
+			opacity: 1;
+			background-color: $main;
+		}
+		a {
+			color: black;
+		}
+	}
+}
+
+h3 {
+	margin-bottom: 0;
+}
+
+#title {
+	position: absolute;
+	bottom: 7rem;
+	h1 {
+		line-height: 1.15;
+	}
+	h2 {
+		font-family: "RoHMinchoStd-UB", "本明朝-U （標準がな）", "HonMincho-U", serif;
+		font-size: 1.6em;
+		margin-top: 10px;
+		br {
+			display: none;
+		}
+	}
+}
+
+#top {
+	height: 100vh;
+	position: relative;
+}
+
+#topback {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	background-image: url(../img/top.png);
+	background-size: cover;
+	background-position: center;
+	z-index: -5;
+	// animation: vertical 3s ease-in-out infinite alternate;
+}
+
+p {
+	text-align: justify;
+	span {
+		font-family: "RoHMinchoStd-UB", "本明朝-U （標準がな）", "HonMincho-U", serif;
+	}
+}
+.chbtn a p{
+	border: 2px solid black;
+	text-align: center;
+	padding: 0.5rem 0;
+	font-family: "RoHMinchoStd-UB", "本明朝-U （標準がな）", "HonMincho-U", serif;
+	color: black;
+	font-size: 1.2em;
+}
+.swiper-pagination-bullet-active{
+	background-color: black !important;
+}
+.off-canvas {
+	p {
+		font-size: 3em;
+		color: $main;
+		margin-left: 2.5rem;
+		margin-top: 1rem;
+		cursor: pointer;
+		font-family: "DINCon";
+	}
+	a {
+		padding: 0.7rem 2.5rem;
+	}
+	#offsns {
+		margin-left: 2.3rem;
+		margin-top: -15px;
+		margin-bottom: 15px;
+		a {
+			color: white;
+			padding: 0;
+			span {
+				font-family: DINCon;
+				font-size: 2em;
+				margin-left: 5px;
+			}
+		}
+		i {
+			font-size: 2em;
+			margin-right: 0.3rem;
+			margin-left: 0.3rem;
+			margin-top: 4px;
+			float: left;
+		}
+		img {
+			margin-left: 0.3rem;
+			width: 2.4rem;
+			margin-top: 1px;
+		}
+	}
+}
+
+.backwhite {
+	background-color: $main;
+}
+
+.time {
+	border: 2px solid black;
+	padding: 0.5rem;
+}
+
+.content {
+	margin-top: 15rem;
+	background-color: $main;
+	padding: 3rem;
+	i {
+		font-size: 0.8em;
+		width: 20px;
+	}
+	h2 {
+		margin-bottom: 0;
+	}
+	h4 {
+		margin-bottom: -10px;
+		span {
+			font-size: 0.7em;
+			vertical-align: 5%;
+		}
+	}
+	p {
+		margin-top: 1.2rem;
+	}
+	h5 {
+		margin-top: -12px;
+		font-family: "RoHMinchoStd-UB", "本明朝-U （標準がな）", "HonMincho-U", serif;
+	}
+	h6 {
+		margin-top: -10px;
+		font-family: "RoHMinchoStd-UB", "本明朝-U （標準がな）", "HonMincho-U", serif;
+	}
+}
+
+
+.fa-map-marker-alt {
+	transform: translateX(2px);
+}
+
+.left20 {
+	padding-left: 25px;
+}
+
+.dammy {
+	height: 30rem;
+	background-color: #333;
+}
+
+.dummy2 {
+	height: 20rem;
+	background-color: #333;
+}
+
+.hovbig {
+	transition: ease all 0.5s;
+	transform-origin: center center;
+	&:hover {
+		transform: scale(1.2);
+	}
+}
+.hovbigsmall {
+	transition: ease all 0.5s;
+	transform-origin: center center;
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+.hovbigleft {
+	transition: ease all 0.5s;
+	transform-origin: left center;
+	&:hover {
+		transform: scale(1.2);
+	}
+}
+
+.hovbigright {
+	transition: ease all 0.5s;
+	transform-origin: right center;
+	&:hover {
+		transform: scale(1.2);
+	}
+}
+
+#footer {
+	margin-top: 20rem;
+	font-family: "DINCon";
+	text-align: center;
+}
+
+#smallnav {
+	background-color: $main;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	img {
+		width: 3rem;
+		padding: 0.5rem;
+	}
+	h3 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -42%);
+		font-size: 2em;
+		a {
+			color: black;
+		}
+	}
+}
+
+#concept {
+	font-size: 1em;
+	line-height: 2;
+	padding: 2rem;
+	text-align: left;
+}
+
+.wait {
+	color: gray;
+	img {
+		opacity: 0.5;
+	}
+	.dummy2 {
+		opacity: 0.5;
+	}
+}
+
+.skima {
+	margin-top: 3rem;
+}
+
+.wow {
+	visibility: hidden;
+}
+
+ul.orbit-container {
+	height: auto !important;
+}
+
+li.orbit-slide {
+	max-height: none !important;
+}
+
+.coming {
+	font-family: DINCon;
+}
+
+#cm2 {
+	h5 {
+		font-family: "RoHMinchoStd-UB", "本明朝-U （標準がな）", "HonMincho-U", serif;
+	}
+}
+.videos{
+		cursor: pointer;
+	p{
+		margin-top: 0;
+	}
+}
+// .swiper-container, .swiper-wrapper {
+//     height: auto !important;
+// }
+// li.swiper-slide {
+//     max-height: none !important;
+// }
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+	.content {
+		padding: 1.5rem;
+		h2 {
+			line-height: 1;
+			margin-bottom: 10px;
+		}
+	}
+	.skima {
+		margin-top: 2rem;
+	}
+}
+
+@media screen and (max-width: 39.9375em) {
+	.chbtn a p{
+	padding: 0.4rem 0;
+	font-size: 0.9em;
+}
+	.tbspace {
+		height: 7px;
+	}
+	.skima {
+		margin-top: 2rem;
+	}
+	#concept {
+		padding: 0;
+		font-size: 0.9em;
+		line-height: 1.8;
+	}
+	.off-canvas-content.is-open-left.has-transition-push {
+		transform: translateX(250px);
+	}
+	.content {
+		margin-top: 5rem;
+		padding: 1rem;
+		h2 {
+			font-size: 2em;
+			line-height: 1;
+			margin-bottom: 5px;
+		}
+		h5 {
+			margin-top: -5px;
+		}
+		h4 {
+			margin-bottom: -5px;
+		}
+		h3 {
+			font-size: 1.5em;
+		}
+		p,
+		td {
+			font-size: 0.9em;
+		}
+		h6 {
+			margin-top: -4px;
+			line-height: 1.3;
+		}
+	}
+	.left20 {
+		padding-left: 23px;
+	}
+	#title {
+		h1 {
+			font-size: 2em;
+		}
+		h2 {
+			font-size: 1.2em;
+			br {
+				display: inline;
+			}
+		}
+	}
+	.position-left {
+		width: 250px;
+	}
+	.off-canvas {
+		p {
+			margin-left: 1rem;
+			margin-top: 0rem;
+		}
+		a {
+			padding: 0.5rem 1.2rem;
+		}
+		#offsns {
+			margin-left: 1rem;
+			margin-top: -20px;
+			margin-bottom: 10px;
+			a {
+				color: white;
+				padding: 0;
+				span {
+					font-family: DINCon;
+					font-size: 2em;
+					margin-left: 5px;
+				}
+			}
+			i {
+				font-size: 1.8em;
+				margin-right: 0.3rem;
+				margin-left: 0.3rem;
+				margin-top: 4px;
+				float: left;
+			}
+			img {
+				margin-left: 0.3rem;
+				width: 2.2rem;
+				margin-top: 1px;
+			}
+		}
+	}
+	.sidemenu {
+		li {
+			font-family: "DINCon";
+			font-size: 1.2em;
+			a {
+				color: $main;
+			}
+		}
+	}
+}

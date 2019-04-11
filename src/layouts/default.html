@@ -1,0 +1,97 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+<!doctype html>
+<html class="no-js" lang="ja">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53606233-4"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-53606233-4');
+  </script>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>武蔵野美術大学 視覚伝達デザイン学科 オープンキャンパス2018</title>
+  <meta charset=utf-8>
+  <meta name=description content="武蔵野美術大学視覚伝達デザイン学科オープンキャンパス2018年度の案内サイトです。会期：2018/6/9（土）, 10（日）, 時間：10：00〜16：30.会場では学生が考えた企画がたくさん行われております。ぜひお越しください。">
+  <meta property="og:title" content="武蔵野美術大学 視覚伝達デザイン学科 オープンキャンパス2018" />
+  <meta property="og:url" content="http://vcd.musabi.ac.jp/opencampus/2018/" />
+  <meta property="og:image" content="http://vcd.musabi.ac.jp/opencampus/2018/assets/img/ogp.png/>
+  <meta property="og:site_name" content="武蔵野美術大学 視覚伝達デザイン学科 オープンキャンパス2018" />
+  <meta property="og:description" content="武蔵野美術大学視覚伝達デザイン学科オープンキャンパス2018年度の案内サイトです。会期：2018/6/9（土）, 10（日）, 時間：10:00–16:30. 会場では学生が考えた企画がたくさん行われております。ぜひお越しください。" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@vcd_oc">
+  <meta property="fb:app_id" content="113428802868526" />
+  <link rel="stylesheet" href="{{root}}assets/css/app.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/css/swiper.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/layzr.js/2.2.2/layzr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?ggfsXn9cZZA%3D&fadein=10" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.min.js"></script>
+</head>
+
+<body>
+  {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}} {{> body}}
+  <script src="{{root}}assets/js/app.js"></script>
+  <script>
+  window.addEventListener("load", () => {
+    const instance = Layzr();
+    instance.update().check().handlers(true); //check()が増えた
+  });
+  </script>
+  <script>
+  new WOW().init();
+  </script>
+  <script>
+  $('.off-canvas a').on('click', function() {
+    $('.off-canvas').foundation('close');
+  });
+  </script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      autoHeight: true,
+      virtual: {
+        slides: (function () {
+          var slides = [];
+          for (var i = 0; i < 2; i += 1) {
+            slides.push('Slide ' + (i + 1));
+          }
+          return slides;
+        }()),
+      },
+    });
+    document.querySelector('.slide-1').addEventListener('click', function (e) {
+      e.preventDefault();
+      swiper.slideTo(0, 0);
+    });
+    document.querySelector('.slide-2').addEventListener('click', function (e) {
+      e.preventDefault();
+      swiper.slideTo(1, 0);
+    });
+  </script>
+  <script>
+    window.onload = function () {
+    document.getElementById( "first" ).click();
+}
+  </script>
+<!--   <script>
+    $(window).on('load',function(){
+    $('#cm2').foundation('open');
+});
+  </script> -->
+</body>
+
+</html>
